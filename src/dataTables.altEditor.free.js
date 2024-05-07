@@ -1,12 +1,13 @@
 /**
  * @summary altEditor
  * @description Lightweight editor for DataTables
- * @version 2.0
+ * @version 2.1
  * @file dataTables.editor.free.js
  * @author kingkode (www.kingkode.com)
  *  Modified by: Kasper Olesen (https://github.com/KasperOlesen), Luca Vercelli (https://github.com/luca-vercelli), Zack Hable (www.cobaltdevteam.com)
  * @contact www.kingkode.com/contact
  * @contact zack@cobaltdevteam.com
+ * @contact nikolay.minchev@gmail.com
  * @copyright Copyright 2016 Kingkode
  *
  * This source file is free software, available under the following license: MIT
@@ -190,7 +191,7 @@
                     '<div class="modal-content">' +
                     '<div class="modal-header">' +
                     '<h4 style="padding-top: 1rem;padding-left: 1rem;" class="modal-title"></h4>' +
-                    '<button style="margin: initial;" type="button" class="close close-button" data-dismiss="modal" data-close aria-label="' + this.language.modalClose + '">' +
+                    '<button style="margin: initial;" type="button" class="close close-button" data-bs-dismiss="modal" data-close aria-label="' + this.language.modalClose + '">' +
                     '<span aria-hidden="true">&times;</span></button>' +
                     '</div>' +
                     '<div class="modal-body">' +
@@ -494,7 +495,7 @@
                 var formName = 'altEditor-delete-form-' + this.random_id;
                 var selector = this.modal_selector;
                 var fill = function () {
-                    var btns = '<button type="button" data-content="remove" class="btn btn-default button secondary" data-close data-dismiss="modal">' + that.language.modalClose + '</button>' +
+                    var btns = '<button type="button" data-content="remove" class="btn btn-default button secondary" data-close data-bs-dismiss="modal">' + that.language.modalClose + '</button>' +
                         '<button type="submit"  data-content="remove" class="btn btn-danger button" id="deleteRowBtn">' + that.language.delete.button + '</button>';
                     $(selector).find('.modal-title').html(that.language.delete.title);
                     $(selector).find('.modal-body').html(that.language.deleteMessage);
@@ -742,7 +743,7 @@
                 var selector = this.modal_selector;
                 var fill = function () 
                 {
-                    var btns = '<button type="button" data-content="remove" class="btn btn-default button secondary" data-dismiss="modal" data-close>' + closeCaption + '</button>' 
+                    var btns = '<button type="button" data-content="remove" class="btn btn-default button secondary" data-bs-dismiss="modal" data-close>' + closeCaption + '</button>' 
                         + '<button type="submit" form="' + formName + '" data-content="remove" class="btn btn-primary button" id="' + buttonClass + '">' + buttonCaption + '</button>';
 
                     $(selector).find('.modal-title').html(modalTitle);
